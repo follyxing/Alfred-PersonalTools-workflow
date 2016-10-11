@@ -3,11 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>me.xingcheng.wf.seconds</string>
+	<string>me.xingcheng.wf.tools</string>
 	<key>category</key>
 	<string>Tools</string>
 	<key>connections</key>
 	<dict>
+		<key>13660AC3-E85B-4B19-BB9B-DB8B58589A02</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F5EF1BF5-C2EE-4A71-9FC4-8A3321C76318</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>A2722B6A-23DE-49B1-87FC-F5520C97B38D</key>
 		<array>
 			<dict>
@@ -20,16 +33,39 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>5439C2F5-0C92-4B79-BA60-198A858F876D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>FC7D1A6A-7A02-4739-82BE-31AC3B8D89CA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>CB22E814-612B-4B0C-85B8-8A7BE68A7B50</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 	</dict>
 	<key>createdby</key>
 	<string>XingCheng</string>
 	<key>description</key>
-	<string>current seconds</string>
+	<string>iTools</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>seconds</string>
+	<string>Tools</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -60,9 +96,9 @@
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string></string>
+				<string>获取1970年至今的秒值</string>
 				<key>title</key>
-				<string></string>
+				<string>seconds</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -92,11 +128,126 @@
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Copied to Clipboard!</string>
+				<key>title</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>5439C2F5-0C92-4B79-BA60-198A858F876D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>http://ping.chinaz.com/{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>F5EF1BF5-C2EE-4A71-9FC4-8A3321C76318</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>ping</string>
+				<key>subtext</key>
+				<string>超级ping</string>
+				<key>text</key>
+				<string>ping</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>13660AC3-E85B-4B19-BB9B-DB8B58589A02</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>json</string>
+				<key>subtext</key>
+				<string>打开www.bejson.com</string>
+				<key>text</key>
+				<string>json格式化</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>FC7D1A6A-7A02-4739-82BE-31AC3B8D89CA</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>http://www.bejson.com</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>CB22E814-612B-4B0C-85B8-8A7BE68A7B50</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>13660AC3-E85B-4B19-BB9B-DB8B58589A02</key>
+		<dict>
+			<key>xpos</key>
+			<integer>70</integer>
+			<key>ypos</key>
+			<integer>380</integer>
+		</dict>
+		<key>5439C2F5-0C92-4B79-BA60-198A858F876D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>440</integer>
+			<key>ypos</key>
+			<integer>250</integer>
+		</dict>
 		<key>A2722B6A-23DE-49B1-87FC-F5520C97B38D</key>
 		<dict>
 			<key>xpos</key>
@@ -110,6 +261,27 @@
 			<integer>440</integer>
 			<key>ypos</key>
 			<integer>110</integer>
+		</dict>
+		<key>CB22E814-612B-4B0C-85B8-8A7BE68A7B50</key>
+		<dict>
+			<key>xpos</key>
+			<integer>440</integer>
+			<key>ypos</key>
+			<integer>520</integer>
+		</dict>
+		<key>F5EF1BF5-C2EE-4A71-9FC4-8A3321C76318</key>
+		<dict>
+			<key>xpos</key>
+			<integer>440</integer>
+			<key>ypos</key>
+			<integer>380</integer>
+		</dict>
+		<key>FC7D1A6A-7A02-4739-82BE-31AC3B8D89CA</key>
+		<dict>
+			<key>xpos</key>
+			<integer>70</integer>
+			<key>ypos</key>
+			<integer>520</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>
